@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="eBay Purchase Automation Suite" parallel="tests" thread-count="3">
+    <!-- Basic Test -->
+    <test name="Basic Navigation Test">
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testBasicNavigation" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Category Selection Test -->
+    <test name="Category Selection Test">
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testCategoryAndProductSelection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Product Verification Test -->
+    <test name="Product Verification Test">
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testProductDetailsAndCartVerification" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Checkout Process Test -->
+    <test name="Checkout Process Test">
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testCheckoutProcess" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- End to End Test -->
+    <test name="End to End Test">
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testEndToEndPurchaseFlow" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Cross Browser Tests -->
+    <test name="Cross Browser Chrome Test">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testCrossBrowser" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Cross Browser Firefox Test">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testCrossBrowser" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Cross Browser Edge Test">
+        <parameter name="browser" value="edge" />
+        <classes>
+            <class name="com.ebay.automation.tests.EbayPurchaseTest">
+                <methods>
+                    <include name="testCrossBrowser" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
